@@ -1,0 +1,75 @@
+.logo-design{
+    width: 100%;
+   }
+   .logo-image{
+       width: 90%;
+       cursor: pointer;
+       
+   }
+   
+   .nabar-section{
+       display: flex;
+       justify-content: space-around;
+       list-style: none;
+       padding: 20px;
+       border-radius: 35px;
+   }
+   
+   .nav-item, a{
+       text-decoration: none !important;
+       color: #ffffff;
+       font-size: 14px;
+       font-weight: 600;
+       cursor: pointer;
+   }
+   .nav-item:hover {
+       text-decoration: none !important;
+       color: #fcd202 !important;
+       font-size: 13px;
+       font-weight: 600;
+       padding: 10px;
+       border-radius: 20px;
+   }
+   .navbar-area{
+       padding-left: 5%;
+       padding-right: 5%;
+   }
+   .contact-btn{
+          color: #000000;
+          padding: 12px 38px;
+          background: unset;
+          border-radius: 15px;
+          color: white;
+          border: 1px solid #fcd202;
+          
+   }
+   .contact-btn:hover{
+       background-color: #fcd202;
+   }
+   .contact-area{
+       display: flex;
+       justify-content: center;
+   }
+   .mobile-view-button{
+       background: none !important;
+       border: none !important;
+       padding: 0 !important;
+       margin: 0 !important;
+       font-size: 35px;
+   }
+   
+   .m-right{
+       display: flex;
+       justify-content: end;
+   }
+   .background-design-mobile{
+       background-color: #fcd202 !important;
+   }
+   .nabar-mobile-section{
+       list-style: none !important;
+       line-height: 4;
+   }
+   .transition-all {
+       transition: all 0.3s ease-in-out;
+     }
+   
