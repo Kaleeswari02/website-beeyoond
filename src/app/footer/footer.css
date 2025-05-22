@@ -1,0 +1,40 @@
+.footer-logo{
+    width: 40%;
+    margin-left: 5%;
+    background-color: #fff;
+}
+.footer-container {
+    border-bottom: 1px solid #ffffffc3;
+}
+.footer-para{
+    color: #ffffffc3;
+    font-size: 14px;
+  
+}
+.footer-para , a {
+    text-decoration: none !important;
+    line-height: 1.8;
+}
+.social-i a{
+    color: #ffffff;
+    font-size: 20px;
+    background-color: #1e1e1e;
+    padding: 7px 15px;
+    margin: 2%;
+    border-radius: 8px;
+}
+.social-i a:hover{
+    background-color: #fcd202;
+    color: #000000;
+}
+.footer-head{
+    color: #fcd202;
+    font-size: 25px;
+}
+.copyrights{
+    text-align: center;
+    color: #ffffffc3;
+}
+.logo-footer{
+    background-color: #fff;
+}
