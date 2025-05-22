@@ -17,11 +17,11 @@ const HomeSection = () => {
       />
       <div className="overlay"/>
 
-      <Container className="">
+      <Container className="mb-xl-5">
         <Row className=" align-items-center hero-overlay-content">
-          <Col md={6} className="mt-xl-3">
+          <Col xl={12} className="mt-xl-3">
             <h1 className="heading">
-            Where Imagination Meets Innovation
+            Where Imagination <br /> <span className="text-span">Meets Innovation</span>
             </h1>
             <p className="subheading">
             Beeyoond creates stunning 2D/3D animations, immersive metaverse experiences, next-gen games, and smart AI-powered solutions.

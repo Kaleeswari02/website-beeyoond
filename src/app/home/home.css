@@ -24,9 +24,13 @@
   }
   
   .heading {
-    font-size: 4rem;
+    font-size: 80px;
     font-weight: bold;
     line-height: 1.2;
+    padding: 0% 20% 0% 0%;
+    font-family: "Anton", sans-serif;
+    font-weight: 400;
+    letter-spacing: 2px;
   }
   
   .subheading {
@@ -40,11 +44,12 @@
   .banner-ctn-btn{
     color: #000000;
     padding: 12px 10px;
-    width: 30%;
+    width: 15%;
     background: unset;
     border-radius: 15px;
     color: white;
     border: 1px solid #fcd202;
+    font-size: 20px;
     
   }
   .hero-overlay-content {
@@ -53,7 +58,9 @@
   }
   .banner-btn{
     width: 20%;
-    
   }
-  
-  
+  .text-span{
+    background: linear-gradient(to bottom, #ffffff 35%, #fcd202 50%);
+    -webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+  }

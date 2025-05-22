@@ -32,8 +32,8 @@ export default function Header(){
       <>
       {/* <div className={`container-fluid fixed-top transition-all ${isScrolled ? 'bg-white text-black shadow-sm' : 'bg-transparent text-black'}`} style={{ transition: '0.3s ease' }}></div>
       <div className={`container-fluid fixed-top transition-all ${isScrolled ? 'bg-white text-black shadow-sm' : 'bg-transparent text-black'}`} style={{ transition: '0.3s ease , cursor: pointer;' }}> */}
-      <div className={`container-fluid fixed-top transition-all ${isScrolled ? 'bg-white text-black shadow-sm' : 'bg-transparent text-black'}`} ></div>
-      <div className={`container-fluid fixed-top transition-all ${isScrolled ? 'bg-white text-black shadow-sm' : 'bg-transparent text-black'}`} >
+      <div className={`container-fluid fixed-top transition-all ${isScrolled ? 'bg-white text-black shadow-sm' : 'bg-transparent text-black'}`}></div>
+      <div className={`container-fluid header-fluid fixed-top transition-all ${isScrolled ? 'bg-white text-black shadow-sm' : 'bg-transparent text-black'}`} >
   <div className="container mt-xl-3">
     <div className="row">
       <div className="col-xl-2">
@@ -49,6 +49,7 @@ export default function Header(){
             <li><Link className={navLinkClass} href="#">Services</Link></li>
             <li><Link className={navLinkClass} href="#">Portfolio</Link></li>
             <li><Link className={navLinkClass} href="#">Testimonials</Link></li>
+            <li><Link className={navLinkClass} href="#">Careers</Link></li>
             <li><Link className={navLinkClass} href="#">Contact Us</Link></li>
           </ul>
         </nav>
