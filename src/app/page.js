@@ -6,14 +6,15 @@ import TabbedContent from "./portfolio/page";
 import { Services } from "./services/page";
 import { Testimonials } from "./testimonials/page";
 export default function Home() {
+  
   return (
   <>
     <Header/>
     <HomeSection/>
     <AboutSection/>
     <Services />
-    <Testimonials/>
-    <TabbedContent />
+    <TabbedContent/>
+    {/* <Testimonials/> */}
     <Footer/>
   </>
   );
