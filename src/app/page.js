@@ -12,8 +12,9 @@ export default function Home() {
     <HomeSection/>
     <AboutSection/>
     <Services />
-    <Testimonials/>
+   
     <TabbedContent />
+     {/* <Testimonials/> */}
     <Footer/>
   </>
   );

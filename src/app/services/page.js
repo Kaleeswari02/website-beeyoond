@@ -113,17 +113,12 @@ export const Services = () => {
         </div>
       </div>
       <div ref={containerRef} className="services-section">
-      
-        <div className='container'>
-          <div className='row'>
-            <div className='justify-content-center'>
               {slidesData.map((slide, index) => (
                 <div
                   key={index}
                   ref={(el) => (cardRefs.current[index] = el)}
                   className="services-card"
                 >
-
                   <div className="services-inner">
                   
                     <div className="services-content">
@@ -144,11 +139,7 @@ export const Services = () => {
                 </div>
               ))}
             </div>
-          </div>
-        </div>
-
-      </div>
-
+        
 
     </>
   );
