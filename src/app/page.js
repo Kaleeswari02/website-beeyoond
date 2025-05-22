@@ -1,4 +1,3 @@
-import { Explore } from "./Explore/page";
 import AboutSection from "./aboutsection/page";
 import Header from "./header/page";
 import HomeSection from "./home/page";
@@ -8,9 +7,9 @@ export default function Home() {
   <>
     <Header/>
     <HomeSection/>
-    <Services />
-    <Explore/>
     <AboutSection/>
+    <Services />
+
   </>
   );
 }
