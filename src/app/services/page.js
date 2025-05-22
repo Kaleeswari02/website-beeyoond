@@ -8,26 +8,33 @@ gsap.registerPlugin(ScrollTrigger);
 
 const slidesData = [
   {
-    img: '/images/services1.png',
+    id:"01",
+    img: '/images/services-img1.jpg',
     title: 'Our Premium Services',
-    text: 'We provide 2D/3D animation, video editing, and game development — all in one studio.',
+    text: `Beeyoond offers a one-stop creative studio delivering high-quality 2D and 3D animation, advanced video editing, and immersive game development. 
+Our multidisciplinary team transforms ideas into captivating visual experiences using cutting-edge tools and technology.`,
   },
   {
-    img: '/images/services2.png',
+    id:"02",
+    img: '/images/services-img2.jpeg',
     title: 'Complete Game Development',
-    text: 'From concept to code, we build immersive experiences.',
+    text: `From the initial concept and design to development and deployment, we build end-to-end game solutions tailored for all platforms.
+Whether you're aiming for mobile, PC, or immersive metaverse environments, we bring your game ideas to life with creativity and precision.`,
   },
   {
-    img: '/images/services1.png',
+    id:"03",
+    img: '/images/services-img3.jpg',
     title: 'Next-Gen 3D Animation',
-    text: 'Realistic characters, environments, and simulations.',
+    text: `Our 3D animation services are built to meet next-gen standards — from realistic character design and lifelike motion to dynamic VFX simulations.
+We blend storytelling with visual excellence, delivering animations that feel immersive, fluid, and emotionally engaging.`,
   },
   {
-    img: '/images/services2.png',
-    title: '4th Complete Game Development',
-    text: 'From concept to code, we build immersive experiences.',
+    id:"04",
+    img: '/images/services-img4.jpg',
+    title: 'AI & Gaming Solutions',
+    text: `Harnessing the power of artificial intelligence, we build smarter, more interactive gaming environments.
+Our services include AI-driven character behaviors, procedural world generation, and intelligent content creation to enhance gameplay and realism.`,
   },
-
 ];
 
 export const Services = () => {
@@ -69,64 +76,80 @@ export const Services = () => {
     });
 
     for (let i = 1; i < total; i++) {
-      timeline.to(
-        cardRefs.current[i],
-        {
-          yPercent: 0,
-          scale: 1,
-          opacity: 1,
-          zIndex: total + i,
-          ease: 'power2.out',
-          duration: 1,
-          onUpdate: () => {
-            for (let j = 0; j < i; j++) {
-              gsap.set(cardRefs.current[j], {
-                yPercent: 0,
-                scale: 0.95,
-                opacity: 1,
-                zIndex: total - j,
-              });
-            }
+      timeline
+        .to(
+          cardRefs.current[i],
+          {
+            yPercent: 0,
+            scale: 1,
+            opacity: 1,
+            zIndex: total + i,
+            ease: 'power2.out',
+            duration: 1,
           },
-        },
-        i - 1
-      );
+          i - 1
+        )
+        // Fade out all previous cards together on the same timeline position
+        .to(
+          cardRefs.current.slice(0, i),
+          {
+            scale: 0.95,
+            opacity: 0,
+            ease: 'power1.out',
+            duration: 1,
+          },
+          i - 1
+        );
     }
+
   }, []);
 
   return (
+    <>
+ <div className="container-fluid services-start-section">
+        <div className="about-head-des"> <h1 className="text-heading pt-5" >Services</h1></div>
+        <div className="container services-para"><p>At Beeyoond, we push the boundaries of digital 
+          storytelling through animation, gaming, AI, and immersive technology. Our team blends creativity with cutting-edge tech to deliver experiences that captivate and inspire.</p>
+        </div>
+      </div>
+      <div ref={containerRef} className="services-section">
+      
+        <div className='container'>
+          <div className='row'>
+            <div className='justify-content-center'>
+              {slidesData.map((slide, index) => (
+                <div
+                  key={index}
+                  ref={(el) => (cardRefs.current[index] = el)}
+                  className="services-card"
+                >
 
-    <div ref={containerRef} className="services-section">
-      <div className='container'>
-        <div className='row'>
-
-          <div className='justify-content-center'>
-            <h2 className='text-white'>Our Services</h2>
-            <p className='text-white'>From concept to code, we build immersive experiences.</p>
-            {slidesData.map((slide, index) => (
-              <div
-                key={index}
-                ref={(el) => (cardRefs.current[index] = el)}
-                className="services-card"
-              >
-
-                <div className="services-inner">
-                  <div className="services-content">
-                    <h2>{slide.title}</h2>
-                    <p>{slide.text}</p>
-                  </div>
-                  <div className="services-image">
-                    <img src={slide.img} alt={`slide-${index}`} />
+                  <div className="services-inner">
+                  
+                    <div className="services-content">
+                  <h5 className="card-id">[{slide.id}]</h5> 
+                      <h2>{slide.title}</h2>
+                      <p>{slide.text}</p>
+                      <button
+                        className="read-more-btn"
+                        onClick={() => alert(`Read more about: ${slide.title}`)}
+                      >
+                        <span>Read More</span>
+                      </button>
+                    </div>
+                    <div className="services-image">
+                      <img src={slide.img} alt={`slide-${index}`} />
+                    </div>
                   </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
 
       </div>
 
 
-    </div>
+    </>
   );
 };

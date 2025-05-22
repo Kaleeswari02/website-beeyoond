@@ -1,3 +1,27 @@
+.services-start-section{
+  background-color: #000;
+}
+.text-heading {
+  font-size: 80px;
+  text-align: center;
+  font-family: "Anton", sans-serif;
+  letter-spacing: 5px;
+  background-image: linear-gradient(to top, #FFD700, #FFFFFF); /* Gold to white gradient */
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  animation: fadeInDown 3.5s ease-in-out;
+}
+
+.services-para {
+  text-align: center;
+  padding: 1% 10%;
+  font-size: 18px;
+  font-weight: 400;
+  word-spacing: 1px;
+  color: #ffffff; 
+  animation: fadeInDown 2s ease-in-out;
+}
 
 .services-section {
   position: relative;
@@ -8,11 +32,11 @@
 }
 
 .services-card {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  /* height: 100%; */
   padding: 50px;
   box-sizing: border-box;
   display: flex;
@@ -22,11 +46,13 @@
   will-change: transform, opacity;
   pointer-events: none;
   transition: transform 0.4s ease, opacity 0.4s ease;
+  
 }
+
 
 /* Inner container with border and two columns */
 .services-inner {
-  border: 1px solid #fff;
+  border: 1px solid #fcd202;
   border-radius: 20px;
   display: flex;
   flex-direction: row;
@@ -40,8 +66,15 @@
 
 .services-content {
   flex: 1;
+   text-align: left;
+   
 }
-
+.card-id {
+  font-size: 30px;
+  color: #ffffff; /* or another brand color */
+  margin-bottom: 8vh;
+  letter-spacing: 3px;
+}
 .services-image {
   flex: 1;
   max-width: 100%;
@@ -59,9 +92,36 @@
   font-size: 2.5rem;
   font-weight: bold;
   margin-bottom: 1rem;
+  font-family: "Anton", sans-serif;
+  letter-spacing:2px;
+   color: #fcd202;
+   /* color: #fff; */
 }
 
 .services-content p {
-  font-size: 1.25rem;
+  font-size: 16px;
   line-height: 1.6;
+    font-family: "Poppins", sans-serif;
+
+}
+
+.read-more-btn {
+  background-color: #fcdc3b; 
+  color: #000;
+  border-radius: 12px;
+  border:1px solid #fcdc3b;
+  cursor: pointer;
+  padding: 10px 30px;
+
+}
+.read-more-btn span{
+  font-family: "Poppins", sans-serif !important;
+ font-size: 1rem;
+  line-height: 1;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.read-more-btn:hover {
+  background-color: #e6c933;
 }
