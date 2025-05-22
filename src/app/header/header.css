@@ -6,7 +6,9 @@
        cursor: pointer;
        
    }
-   
+   .header-fluid{
+    animation: sticky 1.2s;
+   }
    .nabar-section{
        display: flex;
        justify-content: space-around;
@@ -69,7 +71,15 @@
        list-style: none !important;
        line-height: 4;
    }
-   .transition-all {
+   /* .transition-all {
        transition: all 0.3s ease-in-out;
-     }
-   
+     } */
+     @keyframes sticky {
+        0% {
+          top: -200px;
+        }
+      
+        100% {
+          top: 0;
+        }
+      }
