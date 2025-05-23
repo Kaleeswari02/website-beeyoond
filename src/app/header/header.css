@@ -3,8 +3,10 @@
    }
    .logo-image{
        width: 90%;
-       cursor: pointer;
-       
+       cursor: pointer; 
+   }
+   .logo-image-bg{
+    background-color: #ffffff;
    }
    .header-fluid{
     animation: sticky 1.2s;

@@ -38,7 +38,7 @@ export default function Header(){
     <div className="row">
       <div className="col-xl-2">
         <Link href="/">
-        <img src='/images/logo.png' alt="Description of image" width={150} height={60}/>
+        <img className='logo-image-bg' src='/images/logo.png' alt="Description of image" width={150} height={60}/>
         </Link>
       </div>
       <div className="col-xl-8">

@@ -1,13 +1,14 @@
 .text-spanone{
     font-size: 80px;
     text-align: center;
-    font-family: "Anton", sans-serif;
+    font-family: "Source Serif 4", serif;
     letter-spacing: 5px;
     background-image: linear-gradient(to top, #000000, #0000006f);
   color: transparent;
   background-clip: text;
   -webkit-background-clip: text;
   animation: fadeInDown  3.5s ease-in-out;
+  font-weight: 900;
   }
   
   .aboutBackground {
@@ -19,11 +20,12 @@
     margin: 0 !important;
   }
   .imageSection {
-    background-image: url('/images/global.png');
+    background-image: url('/images/about.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     height: 500px; 
+    opacity: 1;
   }
   .about-para{
     text-align: center;
