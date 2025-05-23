@@ -1,12 +1,17 @@
-.services-start-section{
+/* ===============================
+   Section Styling
+================================= */
+.services-start-section {
   background-color: #000;
+  padding-top: 4rem;
 }
+
 .text-heading {
   font-size: 80px;
   text-align: center;
   font-family: "Anton", sans-serif;
   letter-spacing: 5px;
-  background-image: linear-gradient(to top, #FFD700, #FFFFFF); /* Gold to white gradient */
+  background-image: linear-gradient(to top, #FFD700, #FFFFFF);
   color: transparent;
   background-clip: text;
   -webkit-background-clip: text;
@@ -19,10 +24,17 @@
   font-size: 18px;
   font-weight: 400;
   word-spacing: 1px;
-  color: #ffffff; 
+  color: #ffffff;
   animation: fadeInDown 2s ease-in-out;
 }
 
+.services-spacer {
+  height: 100vh;
+}
+
+/* ===============================
+   Scroll Card Container
+================================= */
 .services-section {
   position: relative;
   height: 100vh;
@@ -31,26 +43,35 @@
   background: #000000;
 }
 
+/* ===============================
+   Card Layer
+================================= */
 .services-card {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  /* height: 100%; */
-  padding: 50px;
   box-sizing: border-box;
   display: flex;
   justify-content: center;
   align-items: center;
   color: #fff;
   will-change: transform, opacity;
-  pointer-events: none;
-  transition: transform 0.4s ease, opacity 0.4s ease;
-  
+  pointer-events: none; /* Enable/disable via JS with .active */
+  opacity: 0;
+  transform: scale(0.95);
+  transition: all 0.5s ease;
 }
 
+.services-card.active {
+  opacity: 1;
+  transform: scale(1);
+  pointer-events: auto;
+}
 
-/* Inner container with border and two columns */
+/* ===============================
+   Inner Card Layout
+================================= */
 .services-inner {
   border: 1px solid #fcd202;
   border-radius: 20px;
@@ -58,34 +79,22 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
   padding: 2rem;
   gap: 2rem;
-  height: auto;
   box-sizing: border-box;
 }
 
 .services-content {
   flex: 1;
-   text-align: left;
-   
-}
-.card-id {
-  font-size: 30px;
-  color: #ffffff; /* or another brand color */
-  margin-bottom: 8vh;
-  letter-spacing: 3px;
-}
-.services-image {
-  flex: 1;
-  max-width: 100%;
+  text-align: left;
 }
 
-.services-image img {
-  width: 100%;
-  height: auto;
-  object-fit: contain;
-  border-radius: 12px;
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+.card-id {
+  font-size: 30px;
+  color: #ffffff;
+  margin-bottom: 8vh;
+  letter-spacing: 3px;
 }
 
 .services-content h2 {
@@ -93,35 +102,113 @@
   font-weight: bold;
   margin-bottom: 1rem;
   font-family: "Anton", sans-serif;
-  letter-spacing:2px;
-   color: #fcd202;
-   /* color: #fff; */
+  letter-spacing: 2px;
+  color: #fcd202;
 }
 
 .services-content p {
   font-size: 16px;
   line-height: 1.6;
-    font-family: "Poppins", sans-serif;
-
+  font-family: "Poppins", sans-serif;
 }
 
 .read-more-btn {
-  background-color: #fcdc3b; 
+  background-color: #fcdc3b;
   color: #000;
   border-radius: 12px;
-  border:1px solid #fcdc3b;
+  border: 1px solid #fcdc3b;
   cursor: pointer;
-  padding: 10px 30px;
-
-}
-.read-more-btn span{
-  font-family: "Poppins", sans-serif !important;
- font-size: 1rem;
-  line-height: 1;
+  padding: 10px 25px;
+  font-size: 1rem;
+  width: fit-content;
+  font-family: "Poppins", sans-serif;
   font-weight: 600;
   text-transform: uppercase;
 }
 
 .read-more-btn:hover {
   background-color: #e6c933;
+}
+
+.services-image {
+  flex: 1;
+}
+
+.services-image img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* ===============================
+   Responsive Styles
+================================= */
+
+/* Medium Screens (Tablets) */
+@media (max-width: 992px) {
+  .services-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .services-content,
+  .services-image {
+    width: 100%;
+    flex: 1 1 100%;
+  }
+
+  .services-content h2 {
+    font-size: 2rem;
+  }
+
+  .card-id {
+    margin-bottom: 4vh;
+    font-size: 24px;
+  }
+
+  .read-more-btn {
+    padding: 8px 20px;
+  }
+}
+
+/* Small Screens (Mobile/Tablets) */
+@media (max-width: 768px) {
+  .text-heading {
+    font-size: 50px;
+    letter-spacing: 3px;
+  }
+
+  .services-para {
+    font-size: 16px;
+    padding: 5% 8%;
+  }
+
+  .services-content p {
+    font-size: 15px;
+  }
+}
+
+/* Extra Small Screens (Mobile) */
+@media (max-width: 480px) {
+  .text-heading {
+    font-size: 36px;
+  }
+
+  .card-id {
+    font-size: 20px;
+  }
+
+  .services-content h2 {
+    font-size: 1.8rem;
+  }
+
+  .services-content p {
+    font-size: 14px;
+  }
+
+  .read-more-btn {
+    padding: 8px 18px;
+    font-size: 0.9rem;
+  }
 }
