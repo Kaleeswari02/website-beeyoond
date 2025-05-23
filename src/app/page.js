@@ -4,7 +4,7 @@ import Header from "./header/page";
 import HomeSection from "./home/page";
 import TabbedContent from "./portfolio/page";
 import { Services } from "./services/page";
-import { Testimonials } from "./testimonials/page";
+
 export default function Home() {
   
   return (
@@ -12,11 +12,11 @@ export default function Home() {
     <Header/>
     <HomeSection/>
     <AboutSection/>
-    <Services />
+    {/* <Services /> */}
     <TabbedContent/>
-    {/* <Testimonials/> */}
+ 
     <Footer/>
-  </>
+</>
   );
 }
  

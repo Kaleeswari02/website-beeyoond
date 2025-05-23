@@ -29,6 +29,8 @@ export default function RootLayout({ children }) {
           crossOrigin="anonymous"
           referrerPolicy="no-referrer"
         />
+        {/* font family */}
+        
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         {children}
